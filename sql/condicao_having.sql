@@ -9,3 +9,11 @@ WHERE embalagem <> 'pet'
 GROUP BY embalagem
 HAVING SUM(preco_de_lista) <= 80
 AND MAX(preco_de_lista) >= 5;
+
+
+SELECT * FROM notas_fiscais;
+
+  SELECT CPF, COUNT(*) FROM notas_fiscais
+  WHERE YEAR(DATA_VENDA) = 2016
+  GROUP BY CPF
+  HAVING COUNT(*) > 2000
