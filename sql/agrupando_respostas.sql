@@ -25,3 +25,10 @@ SELECT bairro, SUM(limite_de_credito) AS limite FROM tabela_de_clientes
 WHERE estado = 'SP' 
 GROUP BY bairro
 ORDER BY bairro;
+
+
+SELECT * FROM tabela_de_produtos;
+
+SELECT * FROM tabela_de_produtos WHERE codigo_do_produto = '1101035';
+
+SELECT MAX(`QUANTIDADE`) as 'MAIOR QUANTIDADE' FROM itens_notas_fiscais WHERE `CODIGO_DO_PRODUTO` = '1101035';
